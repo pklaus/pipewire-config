@@ -19,18 +19,14 @@ rules = [
   {
     matches = [
       {
-        # Matches all sources.
-        #node.name = "~alsa_input.*"
-        #node.name = "~alsa_input.pci-0000_0d_00.4.analog-stereo"
-      }
-      {
-        # Matches all sinks.
-        #node.name = "~alsa_output.*"
+        # Only motherboard headphone out:
         node.name = "~alsa_output.pci-0000_0d_00.4.analog-stereo.monitor"
       }
     ]
     actions = {
       update-props = {
+        #node.nick              = "My Node"
+        #node.nick              = null
         #priority.driver        = 100
         #priority.session       = 100
         node.pause-on-idle      = false
@@ -44,10 +40,8 @@ rules = [
         #session.suspend-timeout-seconds = 5      # 0 disables suspend
         #monitor.channel-volumes = false
 
-        #api.alsa.period-size   = 1024
         api.alsa.period-size   = 128
         api.alsa.headroom      = 1024
-        #api.alsa.headroom      = 0
         #api.alsa.start-delay   = 0
         #api.alsa.disable-mmap  = false
         #api.alsa.disable-batch = false
