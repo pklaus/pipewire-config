@@ -1,0 +1,8 @@
+default-nodes
+default-profile
+default-routes
+restore-stream
+
+media-session.d/alsa-monitor.conf
+
+__pycache__
