@@ -1,7 +1,7 @@
 """
 The contexts to render the PipeWire alsa-monitor.conf template using https://github.com/pklaus/jinja2-render:
 
-    jinja2-render default -f alsa-monitor.conf.jinja2 -o alsa-monitor.conf
+    jinja2-render default -c alsa-monitor.conf.contexts.py -f alsa-monitor.conf.jinja2 -o alsa-monitor.conf
 
 """
 
