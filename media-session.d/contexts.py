@@ -83,12 +83,12 @@ CONTEXTS = {
                 "upd": ['audio.format = "S24_3LE"', "audio.rate = 96000"],
             },
             {
-                "id": "~^alsa_output.usb-Generic_Sound_Blaster_Play__4_WWSB1860104004939B-00.analog-stereo$",
+                "id": "~^alsa_output.usb-Generic_Sound_Blaster_Play__4_.*-00.analog-stereo$",
                 "desc": "Headphones (SB P!4)",
                 "upd": ['audio.format = "S24_3LE"', "audio.rate = 192000"],
             },
             {
-                "id": "~^alsa_input.usb-Generic_Sound_Blaster_Play__4_WWSB1860104004939B-00.analog-stereo$",
+                "id": "~^alsa_input.usb-Generic_Sound_Blaster_Play__4_.*-00.analog-stereo$",
                 "desc": "Microphone (SB P!4)",
                 "upd": ['audio.format = "S24_3LE"', "audio.rate = 48000"],
             },
