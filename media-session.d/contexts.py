@@ -9,15 +9,15 @@ CONTEXTS = {
     "default": {
         "rename_devices": [
             {
-                "id": "~^alsa_output.pci-0000_0d_00.4.analog-stereo$",
+                "id": "~^alsa_output.pci-0000_0d_00.4.analog-stereo$", # Prime X570-PRO
                 "desc": "Headphones (Front-Audio)",
-                "upd": ['audio.format = "S24_3LE"', "audio.rate = 192000", "api.alsa.period-size = 128", "api.alsa.headroom = 1024"],
-                # can it do 32bit float??? check aplay -D hw:1,0 -r 192000 -f FLOAT_LE ~/Desktop/file_example_WAV_2MG.wav
+                "upd": ['audio.format = "S32_LE"', "audio.rate = 192000", "api.alsa.period-size = 128", "api.alsa.headroom = 1024"],
             },
             {
-                "id": "~^alsa_input.pci-0000_0d_00.4.analog-stereo$",
+                "id": "~^alsa_input.pci-0000_0d_00.4.analog-stereo$", # Prime X570-PRO
                 "desc": "Microphone (Front-Audio)",
-                "upd": ['audio.format = "S24_3LE"', "audio.rate = 192000", "api.alsa.period-size = 128", "api.alsa.headroom = 1024"],
+                "upd": ['audio.format = "S32_LE"', "audio.rate = 192000", "api.alsa.period-size = 128", "api.alsa.headroom = 1024"],
+                # not 100% sure, it can do S32_LE on that particular input after running:   grep -p 'rates|bits' /proc/asound/card0/codec\#0
             },
             {
                 "id": "~^alsa_output.pci-0000_0d_00.4.iec958-stereo$",
