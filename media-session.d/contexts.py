@@ -20,6 +20,16 @@ CONTEXTS = {
                 # not 100% sure, it can do S32_LE on that particular input after running:   grep -p 'rates|bits' /proc/asound/card0/codec\#0
             },
             {
+                "id": "~^alsa_output.pci-0000_00_1f.3.analog-stereo$", # Mi Notebook Pro
+                "desc": "Speaker/Headphones",
+                "upd": ['audio.format = "S32_LE"', "audio.rate = 48000"],
+            },
+            {
+                "id": "~^alsa_input.pci-0000_00_1f.3.analog-stereo$", # Mi Notebook Pro
+                "desc": "Microphone",
+                "upd": ['audio.format = "S32_LE"', "audio.rate = 48000"],
+            },
+            {
                 "id": "~^alsa_output.pci-0000_0d_00.4.iec958-stereo$",
                 "desc": "n.c. (ALC1220 S/PDIF)",
             },
