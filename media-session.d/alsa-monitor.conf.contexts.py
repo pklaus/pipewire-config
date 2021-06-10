@@ -103,6 +103,16 @@ CONTEXTS = {
                 "upd": ['audio.format = "S24_3LE"', "audio.rate = 48000"],
             },
             {
+                "id": "~^alsa_input.usb-VoiceJoy_Inc_VoiceJoy_U20_USB_Adapter_www.voicejoy.cn-00.mono-fallback$",
+                "desc": "Microphone (Plantronics)",
+                "upd": ['audio.format = "S16_LE"', "audio.rate = 48000"],
+            },
+            {
+                "id": "~^alsa_output.usb-VoiceJoy_Inc_VoiceJoy_U20_USB_Adapter_www.voicejoy.cn-00.analog-stereo$",
+                "desc": "Headphones (Plantronics)",
+                "upd": ['audio.format = "S16_LE"', "audio.rate = 48000"],
+            },
+            {
                 "id": "~^alsa_input.usb-Logitech_Logitech_G430_Gaming_Headset-00.mono-fallback$",
                 "desc": "Microphone (G430)",
                 "upd": ['audio.format = "S16_LE"', "audio.rate = 48000"],
