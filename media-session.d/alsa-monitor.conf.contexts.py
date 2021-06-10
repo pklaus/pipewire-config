@@ -20,6 +20,16 @@ CONTEXTS = {
                 # not 100% sure, it can do S32_LE on that particular input after running:   grep -p 'rates|bits' /proc/asound/card0/codec\#0
             },
             {
+                "id": "~^alsa_output.pci-0000_06_04.0.analog-stereo$", # Asus Xonar DX (CMI8788, Oxygen HD Audio, Virtuoso 100)
+                "desc": "Speaker/Headphones",
+                "upd": ['audio.format = "S32_LE"', "audio.rate = 192000"],
+            },
+            {
+                "id": "~^alsa_input.pci-0000_06_04.0.analog-stereo$", # Asus Xonar DX (CMI8788, Oxygen HD Audio, Virtuoso 100)
+                "desc": "Microphone",
+                "upd": ['audio.format = "S32_LE"', "audio.rate = 192000"],
+            },
+            {
                 "id": "~^alsa_output.pci-0000_00_1f.3.analog-stereo$", # Mi Notebook Pro
                 "desc": "Speaker/Headphones",
                 "upd": ['audio.format = "S32_LE"', "audio.rate = 48000"],
