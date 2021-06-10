@@ -137,6 +137,11 @@ CONTEXTS = {
                 "desc": "Microphone (Marantz MPM-2000)",
                 "upd": ['audio.format = "S16_LE"', "audio.rate = 48000"],
             },
+            {
+                "id": "~^alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo$",
+                "desc": "Microphone (USB Capture Card)",
+                "upd": ['audio.format = "S16_LE"', "audio.rate = 48000"],
+            },
         ]
     }
 }
